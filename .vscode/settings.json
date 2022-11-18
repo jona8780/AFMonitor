@@ -1,0 +1,6 @@
+{
+    "python.linting.pylintArgs": ["--generated-members", "from_json,query"],
+    "emmet.includeLanguages": {
+        "django-html": "html",
+   }
+}
