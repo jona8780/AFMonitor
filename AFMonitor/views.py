@@ -28,3 +28,22 @@ def arrivals(request):
         }
     )
 # Create your views here.
+def departures(request):
+
+    URL = "https://www.toronto-pearson-airport.com/pearson-departures.php"
+    array = BeautifulSoup(requests.get(URL).content, "html.parser").find("tbody").find_all("tr", class_="")
+    flights = []
+    for item in array:
+        flight = item.find_all('td')
+        data = []
+        for item in flight:
+            x = item.text.strip()
+            data.append(x)
+        flights.append(data)
+    return render(
+        request,
+        'Afmonitor/departures.html',
+        {
+            'flights': flights
+        }
+    )
