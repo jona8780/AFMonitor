@@ -1,0 +1,14 @@
+<div>
+    <h2>Current Weather</h2>
+    <h3>{{ weatherText }}</h3>
+    <div>
+        <img src="https://www.accuweather.com/images/weathericons/{{ weatherIcon }}.svg" alt="{{ weatherText }}">
+        <div>
+            <h1>{{ temp }}&deg; C</h1>
+            <h3>RealFeel {{ real }}&deg;</h3>
+        </div>
+    </div>
+    <h3>Wind {{ windDegree }}&deg; @ {{ windSpeed }} km/h</h3>
+    <h3>Guest {{ windGust }} km/h</h3>
+    <h3>Pressure {{ pressure }} hPa</h3>
+</div>
