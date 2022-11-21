@@ -1,3 +1,8 @@
-<h2><a href="{% url 'AFMonitor:arrivals' %}">Arrivals -></a></h2>
-<h2><a href="{% url 'AFMonitor:departures' %}">Departures -></a></h2>
-<h2><a href="{% url 'AFMonitor:weather' %}">Weather -></a></h2>
+{% load static tailwind_tags %}
+{% tailwind_css %}
+<div class="flex flex-col text-3xl">
+    <a class="no-underline hover:underline text-blue-600 hover:text-blue-400" href="{% url 'AFMonitor:arrivals' %}">Arrivals -></a>
+    <a class="no-underline hover:underline text-blue-600 hover:text-blue-400" href="{% url 'AFMonitor:departures' %}">Departures -></a>
+    <a class="no-underline hover:underline text-blue-600 hover:text-blue-400" href="{% url 'AFMonitor:weather' %}">Weather -></a>
+</div>
+

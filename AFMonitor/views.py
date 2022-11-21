@@ -1,14 +1,13 @@
 import requests, json, urllib.request
 from bs4 import BeautifulSoup
 
-from datetime import datetime
-from django.http import HttpResponse
 from django.shortcuts import render
 
 def home(request):
     return render(
         request,
         'Afmonitor/index.html'
+        #'base.html'
     )
 
 def arrivals(request):
