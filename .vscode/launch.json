@@ -5,6 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Tailwind",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\manage.py",
+            "args": [
+                "tailwind",
+                "start"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
@@ -15,5 +27,12 @@
             "django": true,
             "justMyCode": true
         }
+    ],
+    "compounds": [
+      {
+        "name": "Django/Tailwind",
+        "configurations": ["Python: Django", "Python: Tailwind"],
+        "stopAll": true
+      }
     ]
 }
