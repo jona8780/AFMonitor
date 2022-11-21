@@ -6,8 +6,7 @@ from django.shortcuts import render
 def home(request):
     return render(
         request,
-        'Afmonitor/index.html'
-        #'base.html'
+        'AFMonitor/index.html'
     )
 
 def arrivals(request):
@@ -24,7 +23,7 @@ def arrivals(request):
         flights.append(data)
     return render(
         request,
-        'Afmonitor/arrivals.html',
+        'AFMonitor/arrivals.html',
         {
             'flights': flights
         }
@@ -44,7 +43,7 @@ def departures(request):
         flights.append(data)
     return render(
         request,
-        'Afmonitor/departures.html',
+        'AFMonitor/departures.html',
         {
             'flights': flights
         }
@@ -66,7 +65,7 @@ def weather(request):
 
     return render(
         request,
-        'Afmonitor/weather.html',
+        'AFMonitor/weather.html',
         {
             'weatherText': data['WeatherText'],
             'weatherIcon': data['WeatherIcon'],
