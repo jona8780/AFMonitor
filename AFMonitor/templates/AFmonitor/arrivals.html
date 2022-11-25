@@ -1,23 +1,26 @@
-<table>
+{% load static tailwind_tags %}
+{% tailwind_css %}
+<h2 class="text-center text-3xl">Arrivals</h2>
+<table class="table-auto border-collapse border text-md border-gray-600">
     <thead>
-        <tr>
-            <th>Origin</th>
-            <th>Airline</th>
-            <th>Flight</th>
-            <th>Sched</th>
-            <th>Revised</th>
-            <th>Status</th>
+        <tr class="border-b border-gray-600 text-left">
+            <th class="px-2 py-1">Origin</th>
+            <th class="px-2 py-1">Airline</th>
+            <th class="px-2 py-1">Flight</th>
+            <th class="px-2 py-1">Sched</th>
+            <th class="px-2 py-1">Revised</th>
+            <th class="px-2 py-1">Status</th>
         </tr>
     </thead>
     <tbody>
-        {% for flight in flights %}
-            <tr>
-                <td>{{ flight.0 }}</td>
-                <td>{{ flight.1 }}</td>
-                <td>{{ flight.2 }}</td>
-                <td>{{ flight.3 }}</td>
-                <td>{{ flight.4 }}</td>
-                <td>{{ flight.5 }}</td>
+        {% for flight in arrivals %}
+            <tr class="border-b border-gray-400">
+                <td class="px-2 py-1 whitespace-nowrap">{{ flight.0 }}</td>
+                <td class="px-2 py-1 whitespace-nowrap">{{ flight.1 }}</td>
+                <td class="px-2 py-1 whitespace-nowrap">{{ flight.2 }}</td>
+                <td class="px-2 py-1 whitespace-nowrap">{{ flight.3 }}</td>
+                <td class="px-2 py-1 whitespace-nowrap">{{ flight.4 }}</td>
+                <td class="px-2 py-1 whitespace-nowrap">{{ flight.5 }}</td>
             </tr>
         {% endfor %}
     </tbody>

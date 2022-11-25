@@ -1,9 +1,26 @@
 {% load static tailwind_tags %}
 {% tailwind_css %}
-<body class="">
+<body>
+    <div class="flex flex-row p-4">
+        <div class="grow-0">
+            {% include "AFMonitor/arrivals.html" %}
+        </div>
+        <div class="grow">
+            <h1 class="text-6xl text-center">Lester B. Pearson International Airport</h1>
+            {% include "AFMonitor/weather.html" %}
+        </div>
+        <div class="grow-0">
+            {% include "AFMonitor/departures.html" %}
+        </div>
+    </div>
+</body>
+    
+
+
+{% comment %} <body class="">
     <div class="flex flex-col text-3xl">
         <a class="no-underline hover:underline text-blue-600 hover:text-blue-400" href="{% url 'AFMonitor:arrivals' %}">Arrivals -></a>
         <a class="no-underline hover:underline text-blue-600 hover:text-blue-400" href="{% url 'AFMonitor:departures' %}">Departures -></a>
         <a class="no-underline hover:underline text-blue-600 hover:text-blue-400" href="{% url 'AFMonitor:weather' %}">Weather -></a>
     </div>
-</body>
+</body> {% endcomment %}
